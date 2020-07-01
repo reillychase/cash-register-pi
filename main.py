@@ -4,7 +4,7 @@ import configparser
 
 config = configparser.ConfigParser()
 config.read('config.ini')
-stripe.api_key = os.environ.get('cash_register_pi_stripe_api_key')
+stripe.api_key = config["Default"]["StripeAPIKey"]
 events = stripe.Event.list(limit=100)
 last_event = config["Default"]["LastEvent"]
 

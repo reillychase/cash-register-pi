@@ -16,7 +16,7 @@ This was tested on a Raspberry Pi 2 B, but should work on others.
 
 4. I'm using an Etekcity Roverbeats T3 Bluetooth speaker, so I paired that under Bluetooth > Add device and right clicked on the volume control to change the audio output to that device.
 
-5. Open a terminal and run the following commands, make sure to set your Stripe API key in the last command:
+5. Open a terminal and run the following commands, make sure to set your Stripe API key in config.ini:
 
 cd /home/pi
 
@@ -24,12 +24,18 @@ git clone https://github.com/reillychase/cash-register-pi.git
 
 pip3 install stripe
 
-export cash_register_pi_stripe_api_key=sk_live_yourkey
+mv config.ini.example config.ini
+
+nano config.ini
 
 6. Set up a cronjob to check for new Stripe events every minute:
 
+sudo touch /var/log/cash-register-pi.log
+
+sudo chown pi:pi /var/log/cash-register-pi.log
+
 crontab -e
 
-\* \* \* \* \* /usr/bin/python3 /home/pi/cash-register-pi/main.py
+\* \* \* \* \* /usr/bin/python3 /home/pi/cash-register-pi/main.py > /var/log/cash-register-pi.log 2>&1
 
 CTRL+X then y to save
