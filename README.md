@@ -17,5 +17,5 @@ pip3 install stripe
 export cash_register_pi_stripe_api_key=sk_live_yourkey
 6. Set up a cronjob to check for new Stripe events every minute:
 crontab -e
-* * * * * /usr/bin/python3 /home/pi/cash-register-pi/main.py
+\* \* \* \* \* /usr/bin/python3 /home/pi/cash-register-pi/main.py
 CTRL+X then y to save
