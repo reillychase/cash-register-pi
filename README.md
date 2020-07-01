@@ -39,3 +39,6 @@ crontab -e
 \* \* \* \* \* /usr/bin/python3 /home/pi/cash-register-pi/main.py > /var/log/cash-register-pi.log 2>&1
 
 CTRL+X then y to save
+
+# Troubleshooting
+Check /var/log/cash-register-pi.log for any errors
