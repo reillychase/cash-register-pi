@@ -1,7 +1,7 @@
 # Cash Register Pi
 Raspberry Pi audio alerts for Stripe events
 
-For those of us who have online businesses, money is just a number moving over the internet into our bank accounts. It happens quitely and automatically each day. Maybe it would be fun to have some sounds to remind us about it.
+For those of us who have online businesses, money is just a number moving over the internet into our bank accounts. It happens quietly and automatically each day. Maybe it would be fun to have some sounds to remind us about it.
 
 Cash Register Pi will play sounds/ka-ching.mp3 for each new charge.succeeded event, and sounds/squad-goin-up.mp3 for each new customer.subscription.created event.
 
