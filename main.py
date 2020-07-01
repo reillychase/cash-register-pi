@@ -15,7 +15,7 @@ for event in events:
     if event["type"] == "charge.succeeded":
         os.system("cvlc sounds/ka-ching.mp3 -q --play-and-exit")
     if event["type"] == "customer.subscription.created":
-        os.system("cvlc sounds/squad-goin-up.mp3")
+        os.system("cvlc sounds/squad-goin-up.mp3 -q --play-and-exit")
 
 config["Default"]["LastEvent"] = events.data[0]["id"]
 with open('config.ini', 'w') as configfile:
