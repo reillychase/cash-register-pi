@@ -1,7 +1,7 @@
 # Cash Register Pi
 Raspberry Pi audio alerts for Stripe events
 
-Currently it will play ka-ching.mp3 for each new charge.succeeded event, and squad-goin-up.mp3 for each new customer.subscription.created event.
+Currently it will play sounds/ka-ching.mp3 for each new charge.succeeded event, and sounds/squad-goin-up.mp3 for each new customer.subscription.created event.
 
 # Installation instructions
 This was tested on a Raspberry Pi 2 B, but should work on others.
